@@ -29,7 +29,7 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        n = 10;
+        n = 3;
         s = new char[n * 2];
         rec(0, 0);
     }
