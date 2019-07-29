@@ -29,8 +29,8 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        n = 3;
+        n = 2;
         s = new char[n * 2];
         rec(0, 0);
-    }
+        }
 }
