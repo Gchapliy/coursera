@@ -46,10 +46,6 @@ public class Permutation {
         /*n = 10;
         s = new char[n * 2];
         rec(0, 0);*/
-        System.out.println(isCorrect("()()[[[]()]]([()][][()[]])[]()()"));
-        System.out.println(isCorrect("[[]](()()[[[]]][]()()()[()])()]"));
         System.out.println(isCorrect("[]()[](((()]))(()()[][])[]([])[]"));
-        System.out.println(isCorrect("[[]][()[)[]([][]]()][]()()(())()"));
-        System.out.println(isCorrect("(()[([][]())[()][()][][]])([])()"));
     }
 }
