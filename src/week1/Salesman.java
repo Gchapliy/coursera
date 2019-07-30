@@ -24,7 +24,7 @@ public class Salesman {
     static int ans = Integer.MAX_VALUE;
 
     static void out() {
-        System.out.println(count());
+        System.out.println(ans);
         System.out.println(Arrays.toString(p));
     }
 

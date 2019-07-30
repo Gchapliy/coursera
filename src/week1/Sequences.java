@@ -28,8 +28,8 @@ public class Sequences {
     }
 
     public static void main(String[] args) {
-        n = 7;
-        m = 7;
+        n = 6;
+        m = 4;
         arr = new int[n];
         rec(0);
     }

@@ -20,10 +20,18 @@ public class StarsPermutation {
             return;
         }
 
-        s[idx] = '*';
-        cs++;
+        if(cs < stars) {
+            if(idx == 0 || (idx > 0 && s[idx - 1] != '*'))
+                s[idx] = '*';
+                cs++;
+        }
+
         rec(idx + 1);
 
+        if(s[idx] == '*') cs--;
+        s[idx] = '.';
+
+        rec(idx + 1);
     }
 
     public static void main(String[] args) {
