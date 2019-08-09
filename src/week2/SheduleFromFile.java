@@ -5,27 +5,26 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SheduleFromFile {
-    private static Shedule shedule;
+
     public static void main(String[] args) {
         Shedule shedule = new Shedule();
-        fillSheduleFromFile(shedule);
 
-        System.out.println(shedule.getSumCosts());
+        if (fillSheduleFromFile(shedule))
+            System.out.println(shedule.getSumCosts());
 
     }
 
-    private static void fillSheduleFromFile(Shedule shedule){
-        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/sheduleData"))){
+    private static boolean fillSheduleFromFile(Shedule shedule) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/sheduleData"))) {
 
             List<Integer> deadLines = new ArrayList<>();
             List<Integer> costs = new ArrayList<>();
             String[] s;
 
-            while (br.ready()){
+            while (br.ready()) {
                 s = br.readLine().trim().split(" ");
                 deadLines.add(Integer.parseInt(s[0]));
                 costs.add(Integer.parseInt(s[1]));
@@ -36,9 +35,13 @@ public class SheduleFromFile {
             shedule.setUsed(new boolean[deadLines.size()]);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            return false;
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
+
+        return true;
     }
 
 }
