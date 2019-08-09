@@ -34,10 +34,11 @@ public class RequestsFromFile {
 
         return true;
     }
+
     public static void main(String[] args) {
         Requests requests = new Requests();
-        fillRequestsFromFile(requests);
 
-        System.out.println(requests.findMaxRequestsCountToAccess());
+        if (fillRequestsFromFile(requests))
+            System.out.println(requests.findMaxRequestsCountToAccess());
     }
 }

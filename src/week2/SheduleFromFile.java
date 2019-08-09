@@ -9,14 +9,6 @@ import java.util.List;
 
 public class SheduleFromFile {
 
-    public static void main(String[] args) {
-        Shedule shedule = new Shedule();
-
-        if (fillSheduleFromFile(shedule))
-            System.out.println(shedule.getSumCosts());
-
-    }
-
     private static boolean fillSheduleFromFile(Shedule shedule) {
         try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/sheduleData"))) {
 
@@ -44,4 +36,10 @@ public class SheduleFromFile {
         return true;
     }
 
+    public static void main(String[] args) {
+        Shedule shedule = new Shedule();
+
+        if (fillSheduleFromFile(shedule))
+            System.out.println(shedule.getSumCosts());
+    }
 }
