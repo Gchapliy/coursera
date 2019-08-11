@@ -3,8 +3,8 @@ package week2;
 import java.util.Arrays;
 
 public class Requests {
-    private static int[] leftLimit = {1, 0, 4, 18, 2, 5, 1, 1, 2, 7};
-    private static int[] rightLimit = {7, 14, 9, 19, 4, 6, 7, 11, 15, 16};
+    private static int[] leftLimit = {1, 3, 5};
+    private static int[] rightLimit = {5, 6, 7};
 
     public static void setLeftLimit(int[] leftLimit) {
         Requests.leftLimit = leftLimit;
