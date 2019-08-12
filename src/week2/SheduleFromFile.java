@@ -24,7 +24,6 @@ public class SheduleFromFile {
 
             shedule.setDeadLines(deadLines.stream().mapToInt(i -> i).toArray());
             shedule.setCosts(costs.stream().mapToInt(i -> i).toArray());
-            shedule.setUsed(new boolean[deadLines.size()]);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return false;

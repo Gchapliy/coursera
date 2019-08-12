@@ -39,6 +39,6 @@ public class RequestsFromFile {
         Requests requests = new Requests();
 
         if (fillRequestsFromFile(requests))
-            System.out.println(requests.findMaxRequestsCountToAccess());
+            System.out.println(requests.findMaxClassRoomsCountToAccess());
     }
 }

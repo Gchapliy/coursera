@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class IceFromFile {
 
     public static boolean fillIce(Ice ice){
-        try (Stream<String> stream = Files.lines(Paths.get("src/week2/resources/IceData2"))){
+        try (Stream<String> stream = Files.lines(Paths.get("src/week2/resources/IceData"))){
             List<String> ices = new ArrayList<>();
 
             stream.forEach(f -> ices.add(f.trim()));
@@ -28,7 +28,7 @@ public class IceFromFile {
     public static void main(String[] args) {
         Ice ice = new Ice();
         if(fillIce(ice)){
-            System.out.println(ice.findCountOfProducers());
+            System.out.println(ice.findCountOfProducersV2());
         }
     }
 }

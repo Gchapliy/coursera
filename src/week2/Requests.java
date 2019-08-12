@@ -36,6 +36,7 @@ public class Requests {
     public static int findMaxRequestsCountToAccess() {
         int countAccessRequests = 1;
         int lastAccessRequest = 0;
+        boolean[] used = new boolean[leftLimit.length];
 
         //sort requests by right limit before searching
         sortRequestsByRightLimit();
@@ -44,10 +45,37 @@ public class Requests {
             if (leftLimit[i] >= rightLimit[lastAccessRequest]) {
                 countAccessRequests++;
                 lastAccessRequest = i;
+            } else {
+
             }
         }
 
         return countAccessRequests;
+    }
+
+    public static int findMaxClassRoomsCountToAccess() {
+        int countAccessClassRooms = 1;
+        int lastAccessRequest = 0;
+
+        //sort requests by right limit before searching
+        sortRequestsByRightLimit();
+
+        for (int i = 1; i < leftLimit.length; i++) {
+            if (leftLimit[i] >= rightLimit[lastAccessRequest]) {
+                countAccessClassRooms++;
+                lastAccessRequest = i;
+            } else {
+                for (int j = 0; j < i; j++) {
+                    if(rightLimit[j] == leftLimit[i]){
+                        break;
+                    } else if(j == i - 1){
+                        countAccessClassRooms++;
+                    }
+                }
+            }
+        }
+
+        return countAccessClassRooms;
     }
 
     public static void main(String[] args) {

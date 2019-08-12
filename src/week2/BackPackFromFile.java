@@ -41,6 +41,7 @@ public class BackPackFromFile {
         BackPack backPack = new BackPack();
 
         if(fillBackPackFromFile(backPack))
+            backPack.sortThingsByKoef();
             System.out.println(backPack.findMaxCost());
     }
 }
