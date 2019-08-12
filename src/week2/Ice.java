@@ -21,16 +21,15 @@ public class Ice {
 
     public static int findCountOfProducersV2() {
         int maxProducers = 1;
-        boolean find = false;
 
         for (int i = 0; i < ices.length - 1; i++) {
             for (int j = i + 1; j < ices.length; j++) {
                  if (ices[j].equalsIgnoreCase(ices[j - 1])) {
                     maxProducers++;
+
                     break;
                 } else if (ices[j].equalsIgnoreCase(ices[i])) {
                     maxProducers++;
-                    find = true;
                 }
             }
         }
