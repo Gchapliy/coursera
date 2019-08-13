@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 public class Shedule {
     private static int[] deadLines = {2, 2, 1, 7, 5, 5, 4, 7, 7, 5};

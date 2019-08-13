@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ import java.util.List;
 public class PetrolFromFile {
 
     public static boolean fillPetrolFromFile(Petrol petrol) {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/petrolData"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/sportProgramming.week2/resources/petrolData"))) {
 
             int fullTankDistance = 0;
             int distanceBetweenCities = 0;

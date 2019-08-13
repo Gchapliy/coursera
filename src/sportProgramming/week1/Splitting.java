@@ -1,6 +1,4 @@
-package week1;
-
-import java.util.Arrays;
+package sportProgramming.week1;
 
 public class Splitting {
     static int sum, n, counter;

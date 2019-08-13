@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class IceFromFile {
 
     public static boolean fillIce(Ice ice){
-        try (Stream<String> stream = Files.lines(Paths.get("src/week2/resources/IceData"))){
+        try (Stream<String> stream = Files.lines(Paths.get("src/sportProgramming.week2/resources/IceData"))){
             List<String> ices = new ArrayList<>();
 
             stream.forEach(f -> ices.add(f.trim()));

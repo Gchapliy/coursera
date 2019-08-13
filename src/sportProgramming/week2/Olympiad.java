@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 public class Olympiad {
     private static int allTime = 50000;

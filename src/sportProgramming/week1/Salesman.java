@@ -1,8 +1,6 @@
-package week1;
+package sportProgramming.week1;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
 public class Salesman {
 

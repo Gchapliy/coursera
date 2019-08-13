@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.List;
 public class OlympiadFromFile {
 
     private static boolean fillOlympiadFromFile(Olympiad olympiad) {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/olympiadData2"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/sportProgramming.week2/resources/olympiadData2"))) {
 
             List<Integer> tasksTime = new ArrayList<>(1000);
             String[] s;

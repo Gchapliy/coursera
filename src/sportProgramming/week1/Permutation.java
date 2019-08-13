@@ -1,4 +1,4 @@
-package week1;
+package sportProgramming.week1;
 
 public class Permutation {
     static int n, counter;

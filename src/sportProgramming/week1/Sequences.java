@@ -1,6 +1,4 @@
-package week1;
-
-import java.util.concurrent.TimeUnit;
+package sportProgramming.week1;
 
 public class Sequences {
     public static int n,m, counter;

@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.List;
 public class SheduleFromFile {
 
     private static boolean fillSheduleFromFile(Shedule shedule) {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/sheduleData"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/sportProgramming.week2/resources/sheduleData"))) {
 
             List<Integer> deadLines = new ArrayList<>();
             List<Integer> costs = new ArrayList<>();

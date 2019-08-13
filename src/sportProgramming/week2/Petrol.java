@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 public class Petrol {
    /* private static int fullTankDistance = 4;

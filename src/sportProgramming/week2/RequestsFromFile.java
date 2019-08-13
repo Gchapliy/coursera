@@ -1,4 +1,4 @@
-package week2;
+package sportProgramming.week2;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.List;
 public class RequestsFromFile {
 
     private static boolean fillRequestsFromFile(Requests requests) {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/week2/resources/requestsData"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/sportProgramming.week2/resources/requestsData"))) {
 
             List<Integer> leftLimit = new ArrayList<>();
             List<Integer> rightLimit = new ArrayList<>();

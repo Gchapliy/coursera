@@ -1,6 +1,4 @@
-package week2;
-
-import java.util.Arrays;
+package sportProgramming.week2;
 
 public class Requests {
     private static int[] leftLimit = {1, 3, 5};
