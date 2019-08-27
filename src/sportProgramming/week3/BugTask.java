@@ -12,6 +12,12 @@ public class BugTask {
     private static int[][] d = new int[a.length][a[0].length];
     private static int[][] p = new int[a.length][a[0].length];
 
+    public void updateData(int[][] a) {
+        BugTask.a = a;
+        this.d = new int[a.length][a[0].length];
+        this.p = new int[a.length][a[0].length];
+    }
+
     public static void findOptimalPath() {
         int n = a.length;
         int m = a[0].length;
@@ -39,11 +45,11 @@ public class BugTask {
             return;
         if(p[i][j] == 0){
             recout(i - 1, j);
-            System.out.println("D");
+            System.out.print("D");
         }
         if(p[i][j] == 1){
             recout(i, j - 1);
-            System.out.println("R");
+            System.out.print("R");
         }
     }
 
