@@ -9,15 +9,19 @@ public class DominoesStrip {
     private BigInteger[] d;
 
     public void findTilingsNumber(int n, boolean isEffective) {
-        if (!isEffective)
+        if (!isEffective){
             notEffectiveAlgorithm(0, n);
+
+            System.out.println(ans);
+            System.out.println(ans % 100);
+        }
         else {
             d = new BigInteger[n + 1];
             effectiveAlgorithm(n);
-        }
 
-        System.out.println(d[n]);
-        System.out.println(d[n].mod(new BigInteger("1000000000")));
+            System.out.println(d[n]);
+            System.out.println(d[n].mod(new BigInteger("1000000000")));
+        }
     }
 
     private void effectiveAlgorithm(int n) {
