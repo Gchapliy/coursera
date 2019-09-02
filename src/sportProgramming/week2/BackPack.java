@@ -2,13 +2,9 @@ package sportProgramming.week2;
 
 public class BackPack {
 
-    /*private static int maxWeight = 4;
-    private static int[] weights = {2, 3};
-    private static int[] costs = {10, 12};*/
-
-    private static int maxWeight = 10;
-    private static int[] weights = {16, 27, 11, 6, 23, 13, 19, 10, 17, 6};
-    private static int[] costs = {48, 81, 66, 60, 69, 130, 95, 30, 85, 30};
+    private static int maxWeight = 12;
+    private static int[] weights = {2, 5, 10};
+    private static int[] costs = {10, 20, 30};
 
     public static void setWeights(int[] weights) {
         BackPack.weights = weights;
