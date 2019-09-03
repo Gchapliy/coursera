@@ -1,7 +1,5 @@
 package sportProgramming.week3;
 
-import edu.princeton.cs.algs4.In;
-
 import java.io.*;
 import java.util.Arrays;
 
@@ -22,28 +20,48 @@ public class LargestCommonSubsequence {
     }
 
     public void fillFromFile() {
-        try (BufferedReader br = new BufferedReader(new FileReader(new File("src/sportProgramming/week3/resources/sequence2")))) {
-            boolean flag = false;
-            boolean fa = true;
+        try (BufferedReader br = new BufferedReader(new FileReader(new File("src/sportProgramming/week3/resources/sequence3")))) {
+            boolean isA = true;
+            boolean isB = false;
+            int aCounter = 0;
+            int bCounter = 0;
+
             while (br.ready()) {
                 String[] s = br.readLine().trim().split(" ");
-                if (s.length == 1 && flag) {
+                if (s.length == 1 && isB) {
                     b = new int[Integer.parseInt(s[0])];
-                } else if (s.length == 1 && !flag) {
+                    isB = false;
+                    isA = true;
+                } else if (s.length == 1 && isA) {
                     a = new int[Integer.parseInt(s[0])];
+                    isB = true;
+                    isA = false;
+                } else if(s.length > 1 && !isA){
+                    for (int i = 0; i < s.length; i++) {
+                        a[aCounter] = Integer.parseInt(s[i]);
+                        aCounter++;
+                    }
+                } else if(s.length > 1 && !isB){
+                    for (int i = 0; i < s.length; i++) {
+                        b[bCounter] = Integer.parseInt(s[i]);
+                        bCounter++;
+                    }
                 }
-
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        d = new int[a.length][b.length];
+       // System.out.println("a - " + Arrays.toString(a));
+       // System.out.println("b - " + Arrays.toString(b));
     }
 
     public static void main(String[] args) {
         LargestCommonSubsequence largestCommonSubsequence = new LargestCommonSubsequence();
+        largestCommonSubsequence.fillFromFile();
         System.out.println(largestCommonSubsequence.calculateSizeLargestSubsequence());
     }
 }

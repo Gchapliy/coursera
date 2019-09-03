@@ -64,7 +64,6 @@ public class RectangleSum {
 
     public void calculateQueries() {
 
-
         precalculationSections();
         int allSum = 0;
         for (int i = 0; i < q.length; i++) {
